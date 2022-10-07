@@ -1,0 +1,118 @@
+.site-header{
+    z-index: 10000;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+
+    background: #fff !important;
+}
+.header-container{
+        width: 100%;
+        max-width: 1340px;
+        margin: 0 auto;
+
+        background: #fff;
+}
+.site-navbar{
+    position: fixed;
+    width: 100%;
+    max-width: 1340px;
+    padding: 20px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    background: white;
+}
+.site-logo{
+    display: block;
+}
+.site-logo__img{
+    display: block;
+    width: 40px;
+}
+.site-navbar__list, .site-navbar__list-two{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 60px;
+
+}
+.site-navbar__list-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.site-navbar__list-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.site-navbar__list-item-two{
+    display: none;
+}
+.chek-btn{
+    display: none;
+}
+#chek{
+    display: none;
+}
+.chek-btn-close{
+    display: none;
+    font-size: 20px;
+}
+@media screen and(max-width:650px){
+    .site-navbar__list-two{
+        display: none;
+    }
+    .site-navbar__list{
+        width: 230px;
+        height: 100vh;
+        position: absolute;
+        top: 80px;
+        right: -100%;
+
+        padding: 30px 25px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        gap: 25px;
+
+        background: rgba($color: #fff, $alpha: 0.8);
+
+        transition: all 0.6s;
+    }
+    .site-navbar__list-item-two{
+        display: block;
+    }
+    .chek-btn{
+        display: block;
+    }
+    
+    #chek:checked ~ .site-navbar__list{
+        right: 0;
+    }
+    #chek:checked ~ .chek-btn{
+        display: none;
+    }
+    #chek:checked ~ .chek-btn-close{
+        display: block;
+    }
+    
+}
